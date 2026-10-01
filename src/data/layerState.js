@@ -680,6 +680,11 @@ export const LAYER_STATE_REGISTRY = Object.freeze([
     optionOwner: 'street-level',
   }),
   Object.freeze({
+    id: 'surface-temperature',
+    token: '9',
+    disposition: 'enabled-only',
+  }),
+  Object.freeze({
     id: 'telegeography-submarine-cables',
     token: 'u',
     disposition: 'enabled-only',
