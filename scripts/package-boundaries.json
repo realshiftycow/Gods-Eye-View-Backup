@@ -3240,6 +3240,7 @@
       "src/app/layers/osmPlaces.js",
       "src/voice/areaActions.js",
       "src/layers/aurora/rendering.js",
+      "src/layers/aurora/magneticLocalTime.js",
       "src/layers/aurora/source.js",
       "src/layers/aurora/index.js"
     ],
@@ -3860,6 +3861,7 @@
       "src/layers/osmPlaces/index.js",
       "src/app/layers/osmPlaces.js",
       "src/layers/aurora/rendering.js",
+      "src/layers/aurora/magneticLocalTime.js",
       "src/layers/aurora/index.js"
     ],
     "external": [
