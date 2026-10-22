@@ -3016,5 +3016,9 @@
   "The provider rejected the API key. Check it in Provider Settings.": "服務商拒絕了 API 密鑰。請在服務商設置中檢查。",
   "Too many chat requests. Try again in {seconds} s.": "聊天請求過多。請在 {seconds} 秒後重試。",
   "The provider refused access for this key. Check the key's project, region or permissions.": "服務商拒絕了此密鑰的訪問請求。請檢查該密鑰所屬的項目、區域或權限。",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "服務商賬戶餘額不足。請檢查賬戶的計費信息，或在設置中選擇其他 AI 服務商。"
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "服務商賬戶餘額不足。請檢查賬戶的計費信息，或在設置中選擇其他 AI 服務商。",
+  "Clean view: hide the controls": "簡潔檢視：隱藏控制項",
+  "Exit clean view: show the controls": "結束簡潔檢視：顯示控制項",
+  "Clean view: hide the controls (V)": "簡潔檢視：隱藏控制項 (V)",
+  "{label} (V)": "{label} (V)"
 }
