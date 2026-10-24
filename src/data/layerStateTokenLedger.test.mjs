@@ -140,7 +140,7 @@ test('reservation ledger is complete, pinned, and rejects duplicate or malformed
       'sea-marks': '6',
       'ski-pistes': '7',
       'drone-airspace': '8',
-      'surface-temperature': '9',
+      temperature: '9',
     },
   );
   assert.throws(
@@ -295,7 +295,7 @@ test('allocation batches cross the last digit and base-36 pair boundaries in ord
     ...digitRows,
   ]);
   const beforeNine = { ...allDigits };
-  delete beforeNine['surface-temperature'];
+  delete beforeNine['temperature'];
   assert.equal(
     validateLayerStateAllocations(beforeNine, {
       ...beforeNine,

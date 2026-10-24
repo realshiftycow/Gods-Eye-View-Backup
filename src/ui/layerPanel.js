@@ -85,11 +85,11 @@ const PANEL_GROUPS = [
     ids: [
       'air-quality',
       'wind',
+      'temperature',
       'weather-radar',
       'weather-satellite',
       'weather-lightning',
       'weather-cyclones',
-      'surface-temperature',
     ],
   },
   // Directions renders in the Utilities panel, beside Draw and Import, and
@@ -587,6 +587,7 @@ export class LayerPanel {
             layer.enabled &&
             [
               'wind',
+              'temperature',
               'weather-radar',
               'weather-satellite',
               'weather-lightning',
