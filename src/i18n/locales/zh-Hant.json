@@ -3016,5 +3016,20 @@
   "The provider rejected the API key. Check it in Provider Settings.": "服務商拒絕了 API 密鑰。請在服務商設置中檢查。",
   "Too many chat requests. Try again in {seconds} s.": "聊天請求過多。請在 {seconds} 秒後重試。",
   "The provider refused access for this key. Check the key's project, region or permissions.": "服務商拒絕了此密鑰的訪問請求。請檢查該密鑰所屬的項目、區域或權限。",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "服務商賬戶餘額不足。請檢查賬戶的計費信息，或在設置中選擇其他 AI 服務商。"
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "服務商賬戶餘額不足。請檢查賬戶的計費信息，或在設置中選擇其他 AI 服務商。",
+  "Tilt up toward the horizon": "向地平線方向抬高視角",
+  "Tilt down toward top-down view": "向俯視視角壓低",
+  "Top-down view": "俯視視角",
+  "Look left": "向左看",
+  "Look right": "向右看",
+  "Look up": "向上看",
+  "Look down": "向下看",
+  "Map navigation": "地圖導覽",
+  "Tilt": "傾斜",
+  "Tilt: top-down (bottom) to near horizon (top)": "傾斜：俯視（底部）至接近地平線（頂部）",
+  "Map heading. Drag to rotate, arrow keys turn, Home for north": "地圖朝向。拖曳以旋轉，方向鍵轉向，Home 鍵朝北",
+  "North, 0 degrees": "北，0 度",
+  "Look around": "環顧四周",
+  "{heading} degrees from north": "偏北 {heading} 度",
+  "{tilt} degrees from top-down": "偏離俯視 {tilt} 度"
 }
