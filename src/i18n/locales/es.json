@@ -3008,5 +3008,12 @@
   "Edit anchors, data packs and shot details": "Edita anclas, paquetes de datos y detalles de los planos",
   "Download this scene as JSON or an asset bundle": "Descarga esta escena como JSON o como paquete de recursos",
   "Left panels": "Paneles izquierdos",
-  "Right panels": "Paneles derechos"
+  "Right panels": "Paneles derechos",
+  "Approximate location; coverage not calibrated.": "Ubicación aproximada; cobertura sin calibrar.",
+  "LOCATION · APPROXIMATE": "UBICACIÓN · APROXIMADA",
+  "Open official camera page ↗": "Abrir la página oficial de la cámara ↗",
+  "PLAYER IN PANEL": "REPRODUCTOR EN EL PANEL",
+  "PUBLIC PLAYER · EXTERNAL": "REPRODUCTOR PÚBLICO · EXTERNO",
+  "{camera} — public player": "{camera} — reproductor público",
+  "{city} CCTV · {name} · PUBLIC PLAYER · APPROXIMATE LOCATION · COVERAGE NOT CALIBRATED": "{city} CCTV · {name} · REPRODUCTOR PÚBLICO · UBICACIÓN APROXIMADA · COBERTURA SIN CALIBRAR"
 }

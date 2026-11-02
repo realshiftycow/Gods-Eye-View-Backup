@@ -3078,5 +3078,12 @@
   "Edit anchors, data packs and shot details": "Изменить якоря, пакеты данных и параметры кадров",
   "Download this scene as JSON or an asset bundle": "Скачать эту сцену в формате JSON или архивом ресурсов",
   "Left panels": "Левые панели",
-  "Right panels": "Правые панели"
+  "Right panels": "Правые панели",
+  "Approximate location; coverage not calibrated.": "Приблизительное местоположение; зона обзора не откалибрована.",
+  "LOCATION · APPROXIMATE": "МЕСТОПОЛОЖЕНИЕ · ПРИБЛИЗИТЕЛЬНОЕ",
+  "Open official camera page ↗": "Открыть официальную страницу камеры ↗",
+  "PLAYER IN PANEL": "ПРОИГРЫВАТЕЛЬ В ПАНЕЛИ",
+  "PUBLIC PLAYER · EXTERNAL": "ОБЩЕДОСТУПНЫЙ ПРОИГРЫВАТЕЛЬ · ВНЕШНИЙ",
+  "{camera} — public player": "{camera} — общедоступный проигрыватель",
+  "{city} CCTV · {name} · PUBLIC PLAYER · APPROXIMATE LOCATION · COVERAGE NOT CALIBRATED": "{city} CCTV · {name} · ОБЩЕДОСТУПНЫЙ ПРОИГРЫВАТЕЛЬ · ПРИБЛИЗИТЕЛЬНОЕ МЕСТОПОЛОЖЕНИЕ · ЗОНА ОБЗОРА НЕ ОТКАЛИБРОВАНА"
 }

@@ -2868,5 +2868,12 @@
   "Edit anchors, data packs and shot details": "编辑锚点、数据包和镜头详情",
   "Download this scene as JSON or an asset bundle": "将此场景下载为 JSON 或资源包",
   "Left panels": "左侧面板",
-  "Right panels": "右侧面板"
+  "Right panels": "右侧面板",
+  "Approximate location; coverage not calibrated.": "位置为近似值；覆盖范围未经校准。",
+  "LOCATION · APPROXIMATE": "位置 · 近似",
+  "Open official camera page ↗": "打开摄像头官方页面 ↗",
+  "PLAYER IN PANEL": "面板内播放器",
+  "PUBLIC PLAYER · EXTERNAL": "公开播放器 · 外部",
+  "{camera} — public player": "{camera} — 公开播放器",
+  "{city} CCTV · {name} · PUBLIC PLAYER · APPROXIMATE LOCATION · COVERAGE NOT CALIBRATED": "{city} CCTV · {name} · 公开播放器 · 近似位置 · 覆盖范围未经校准"
 }
