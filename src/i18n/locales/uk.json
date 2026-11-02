@@ -3085,5 +3085,17 @@
   "Load scenes from an exported JSON file": "Завантажити сцени з експортованого файлу JSON",
   "Download the timing log of the last play": "Завантажити журнал таймінгів останнього відтворення",
   "Edit anchors, data packs and shot details": "Змінити якорі, пакети даних і параметри кадрів",
-  "Download this scene as JSON or an asset bundle": "Завантажити цю сцену у форматі JSON або архівом ресурсів"
+  "Download this scene as JSON or an asset bundle": "Завантажити цю сцену у форматі JSON або архівом ресурсів",
+  "READ NEAREST": "ПРОЧИТАТИ НАЙБЛИЖЧЕ",
+  "Fly to the nearest sign and read its board": "Перелетіти до найближчого табло й прочитати його",
+  "No signs are currently posting": "Зараз жодне табло не показує повідомлень",
+  "Message boards": "Інформаційні табло",
+  "Live message boards, each facing the traffic it addresses. Zoom in to read the face; a multi-page board cycles.": "Інформаційні табло в реальному часі, кожне повернуте до потоку, якому адресоване. Наблизьте, щоб прочитати напис; багатосторінкове табло гортає сторінки.",
+  "Message sign": "Інформаційне табло",
+  "No message-sign packs enabled; see .env.example to enable one": "Не ввімкнено жодного пакета інформаційних табло; щоб увімкнути, див. .env.example",
+  "Message signs timed out": "Минув час очікування інформаційних табло",
+  "Message signs temporarily unavailable": "Інформаційні табло тимчасово недоступні",
+  "Message signs returned an incomplete response": "Інформаційні табло повернули неповну відповідь",
+  "Message signs": "Інформаційні табло",
+  "Message Signs": "Інформаційні табло"
 }

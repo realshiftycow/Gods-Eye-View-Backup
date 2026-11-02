@@ -3015,5 +3015,17 @@
   "Load scenes from an exported JSON file": "Carica le scene da un file JSON esportato",
   "Download the timing log of the last play": "Scarica il log dei tempi dell'ultima riproduzione",
   "Edit anchors, data packs and shot details": "Modifica ancore, pacchetti dati e dettagli degli scatti",
-  "Download this scene as JSON or an asset bundle": "Scarica questa scena come JSON o pacchetto di risorse"
+  "Download this scene as JSON or an asset bundle": "Scarica questa scena come JSON o pacchetto di risorse",
+  "READ NEAREST": "LEGGI IL PIÙ VICINO",
+  "Fly to the nearest sign and read its board": "Vola al pannello più vicino e leggine il messaggio",
+  "No signs are currently posting": "Al momento nessun pannello mostra messaggi",
+  "Message boards": "Pannelli a messaggio",
+  "Live message boards, each facing the traffic it addresses. Zoom in to read the face; a multi-page board cycles.": "Pannelli a messaggio in tempo reale, ciascuno rivolto al traffico a cui si indirizza. Avvicinati per leggere la faccia; un pannello a più pagine le alterna.",
+  "Message sign": "Pannello a messaggio",
+  "No message-sign packs enabled; see .env.example to enable one": "Nessun pacchetto di pannelli a messaggio attivo; consulta .env.example per attivarne uno",
+  "Message signs timed out": "I pannelli a messaggio sono andati in timeout",
+  "Message signs temporarily unavailable": "Pannelli a messaggio temporaneamente non disponibili",
+  "Message signs returned an incomplete response": "I pannelli a messaggio hanno restituito una risposta incompleta",
+  "Message signs": "Pannelli a messaggio",
+  "Message Signs": "Pannelli a messaggio"
 }

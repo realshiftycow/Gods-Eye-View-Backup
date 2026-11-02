@@ -1066,10 +1066,11 @@ test('the voice TOOL SCHEMA matches the pinned contract — the mission mapping 
   // Panel adds timeout and named voice/provider targets; consolidated guidance
   // preserves the mission mapping and globe-rotation arguments.
   // S2 GhostMaps extends the generated layer enums; both feature contracts remain.
-  assert.equal(block.length, 31206, 'serialized tool schema length drifted');
+  // Message signs adds its context enum value.
+  assert.equal(block.length, 31222, 'serialized tool schema length drifted');
   assert.equal(
     crypto.createHash('sha256').update(block).digest('hex'),
-    'f772df95404494bf492e02fde1beabffdfe61986940bffd0cf9ad5a38d768746',
+    '44c7694eca2b3ab9441edfde78aae0725c051fb4dac11c882c6ce7ee3bae3859',
     'the first-run missions must ride EXISTING tools: no schema edit, no cache bust',
   );
   const instructions = fs.readFileSync(

@@ -2875,5 +2875,17 @@
   "Play from this scene through the rest of the project": "从此场景开始播放项目中的其余场景",
   "Play the shot after the selected one, moving on to the next scene when needed": "播放所选镜头的下一个镜头，必要时进入下一个场景",
   "Edit anchors, data packs and shot details": "编辑锚点、数据包和镜头详情",
-  "Download this scene as JSON or an asset bundle": "将此场景下载为 JSON 或资源包"
+  "Download this scene as JSON or an asset bundle": "将此场景下载为 JSON 或资源包",
+  "READ NEAREST": "读取最近",
+  "Fly to the nearest sign and read its board": "飞到最近的情报板并读取内容",
+  "No signs are currently posting": "目前没有情报板显示信息",
+  "Message boards": "情报板",
+  "Live message boards, each facing the traffic it addresses. Zoom in to read the face; a multi-page board cycles.": "实时情报板，每块都朝向其提示的车流。放大即可读取板面；多页情报板会轮换显示。",
+  "Message sign": "情报板",
+  "No message-sign packs enabled; see .env.example to enable one": "未启用任何情报板数据包；请参阅 .env.example 进行启用",
+  "Message signs timed out": "情报板请求超时",
+  "Message signs temporarily unavailable": "情报板暂时不可用",
+  "Message signs returned an incomplete response": "情报板返回的响应不完整",
+  "Message signs": "情报板",
+  "Message Signs": "情报板"
 }
