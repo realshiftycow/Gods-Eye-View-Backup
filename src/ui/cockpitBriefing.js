@@ -1,5 +1,6 @@
 /** Regional briefing requests, pages and rotation for the Cockpit controller. */
-import { formatNumber, t, msg } from '../i18n/index.js';
+import { isRecentDmhObservation } from '../data/regionalModel.js';
+import { formatDate, formatNumber, t, msg } from '../i18n/index.js';
 import {
   COCKPIT_BRIEF_ROTATE_MS,
   COCKPIT_REGIONAL_REFRESH_MS,
@@ -14,6 +15,14 @@ import {
   createBriefState,
 } from './cockpitBriefPages.js';
 
+function usableDmhObservation(observation) {
+  return (
+    isRecentDmhObservation(observation) &&
+    Number.isFinite(observation?.distanceM) &&
+    observation.distanceM >= 0 &&
+    observation.distanceM <= 50_000
+  );
+}
 // regionalModel.weatherCodeLabel is shared with node code and returns
 // English; translate it here.
 const WEATHER_CONDITION_KEYS = Object.freeze({
@@ -216,6 +225,8 @@ export function maybeRefreshRegionalBrief(info) {
 }
 
 export function renderRegionalBriefStatus(status, info) {
+  this.regionalBrief = null;
+  this.brief.local = { ...createBriefState().local };
   const { news, local } = this.brief;
   news.statusHidden = false;
   news.state = status;
@@ -283,6 +294,8 @@ export function renderRegionalBrief(payload, info) {
         })
       : '—',
   };
+  this.regionalBrief = payload;
+  presentDmh.call(this, payload?.stationObservation);
   this.brief.regionalStatus = payload?.status || 'partial';
   if (this.briefPageIndex === 1) {
     this.brief.source = t('{source} · LOCATION QUERY', {
@@ -291,4 +304,42 @@ export function renderRegionalBrief(payload, info) {
   }
   this.publishBriefView();
   this.scheduleContextLayout();
+}
+
+function presentDmh(observation) {
+  const local = this.brief.local;
+  const usable = usableDmhObservation(observation);
+  local.observationHidden = !usable;
+  const values = [];
+  if (Number.isFinite(observation?.temperatureC))
+    values.push(
+      `${formatNumber(observation.temperatureC, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}°C`,
+    );
+  if (Number.isFinite(observation?.humidityPct))
+    values.push(
+      t('RH {percent}%', {
+        percent: formatNumber(Math.round(observation.humidityPct)),
+      }),
+    );
+  if (Number.isFinite(observation?.windKph))
+    values.push(
+      t('WIND {speed} KM/H {direction}', {
+        speed: formatNumber(Math.round(observation.windKph)),
+        direction: formatCockpitWindDirection(observation.windDirectionDeg),
+      }),
+    );
+  local.observation = usable
+    ? [
+        t('DMH / DINAC · STATION OBSERVATION'),
+        t('{station} · {distance} KM FROM LOCATION', {
+          station: observation.stationName,
+          distance: formatNumber(observation.distanceM / 1000, {
+            minimumFractionDigits: 1,
+            maximumFractionDigits: 1,
+          }),
+        }),
+        values.join(' · '),
+        `${formatDate(new Date(observation.observedAt), { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'UTC' })} UTC · ${formatCockpitBriefAge(observation.observedAt)}`,
+      ].join('\n')
+    : '';
 }

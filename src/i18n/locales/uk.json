@@ -3078,5 +3078,9 @@
   "Left panels": "Ліві панелі",
   "Right panels": "Праві панелі",
   "CONFIRMED": "ПІДТВЕРДЖЕНО",
-  "PAD / RTLS": "МІСЦЕ ЗАПУСКУ / RTLS"
+  "PAD / RTLS": "МІСЦЕ ЗАПУСКУ / RTLS",
+  "RH {percent}%": "ВІДНОСНА ВОЛОГІСТЬ {percent}%",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · СПОСТЕРЕЖЕННЯ СТАНЦІЇ",
+  "{station} · {distance} KM FROM LOCATION": "{station} · {distance} КМ ВІД МІСЦЯ",
+  "WIND {speed} KM/H {direction}": "ВІТЕР {speed} КМ/ГОД {direction}"
 }

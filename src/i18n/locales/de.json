@@ -2938,5 +2938,9 @@
   "Left panels": "Linke Panels",
   "Right panels": "Rechte Panels",
   "CONFIRMED": "BESTÄTIGT",
-  "PAD / RTLS": "STARTPLATZ / RTLS"
+  "PAD / RTLS": "STARTPLATZ / RTLS",
+  "RH {percent}%": "REL. FEUCHTE {percent}%",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · STATIONSBEOBACHTUNG",
+  "{station} · {distance} KM FROM LOCATION": "{station} · {distance} KM VOM STANDORT",
+  "WIND {speed} KM/H {direction}": "WIND {speed} KM/ST {direction}"
 }

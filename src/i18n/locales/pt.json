@@ -3008,5 +3008,9 @@
   "Left panels": "Painéis à esquerda",
   "Right panels": "Painéis à direita",
   "CONFIRMED": "CONFIRMADA",
-  "PAD / RTLS": "PLATAFORMA / RTLS"
+  "PAD / RTLS": "PLATAFORMA / RTLS",
+  "RH {percent}%": "UMIDADE RELATIVA {percent}%",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · OBSERVAÇÃO DA ESTAÇÃO",
+  "{station} · {distance} KM FROM LOCATION": "{station} · A {distance} KM DO LOCAL",
+  "WIND {speed} KM/H {direction}": "VENTO {speed} KM/H {direction}"
 }

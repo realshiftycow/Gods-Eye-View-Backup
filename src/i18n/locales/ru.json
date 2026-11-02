@@ -3078,5 +3078,9 @@
   "Edit anchors, data packs and shot details": "Изменить якоря, пакеты данных и параметры кадров",
   "Download this scene as JSON or an asset bundle": "Скачать эту сцену в формате JSON или архивом ресурсов",
   "Left panels": "Левые панели",
-  "Right panels": "Правые панели"
+  "Right panels": "Правые панели",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · НАБЛЮДЕНИЕ СТАНЦИИ",
+  "RH {percent}%": "ОВ {percent}%",
+  "WIND {speed} KM/H {direction}": "ВЕТЕР {speed} КМ/Ч {direction}",
+  "{station} · {distance} KM FROM LOCATION": "{station} · В {distance} КМ ОТ ТОЧКИ"
 }

@@ -77,6 +77,8 @@ function leaveSignals() {
           <div><span>{{ t('SKY') }}</span><strong id="cockpit-local-condition">{{ b.local.condition }}</strong><small id="cockpit-local-cloud">{{ b.local.cloud }}</small></div>
           <div><span>{{ t('PRECIP') }}</span><strong id="cockpit-local-precipitation">{{ b.local.precipitation }}</strong><small>{{ t('MM') }}</small></div>
         </div>
+        <p id="cockpit-local-observation" class="cockpit-local-observation" :hidden="b.local.observationHidden" aria-live="polite">{{ b.local.observation }}</p>
+        <a class="cockpit-weather-credit" href="https://www.meteorologia.gov.py/" target="_blank" rel="noopener" :hidden="b.local.observationHidden" translate="no">DMH / DINAC</a>
         <a class="cockpit-weather-credit" href="https://open-meteo.com/" target="_blank" rel="noopener">{{ t('Weather data by Open-Meteo.com') }}</a>
       </section>
     </div>

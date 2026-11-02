@@ -71,6 +71,8 @@ export function createBriefState() {
       condition: t('UNKNOWN'),
       cloud: '—',
       precipitation: '—',
+      observation: '',
+      observationHidden: true,
     },
   };
 }

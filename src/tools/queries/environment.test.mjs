@@ -872,6 +872,30 @@ test('installation names wait for the name pack, briefly', async (t) => {
   assert.match(slow.summary, /site names are still loading\)\.$/);
 });
 
+test('regional briefs preserve DMH station attribution separately from forecast weather', async () => {
+  const observation = {
+    source: 'DMH / DINAC',
+    stationName: 'Fixture',
+    distanceM: 2500,
+    observedAt: '2026-10-15T06:00:00Z',
+    temperatureC: 20,
+  };
+  const regional = {
+    getBrief: async () => ({
+      weather: conditions,
+      stationObservation: observation,
+      stationObservationStatus: 'ready',
+      articles: [],
+    }),
+  };
+  const result = await catalogWith({ regional }).call('get_regional_brief', {
+    location: { lat: -25.3, lon: -57.6 },
+  });
+  assert.equal(result.data.weather.temperature_c, 26.3);
+  assert.deepEqual(result.data.station_observation, observation);
+  assert.equal(result.data.station_observation_status, 'ready');
+});
+
 test('stale fire perimeters say so, with when they were fetched', async () => {
   const fetchedAt = Date.UTC(2026, 9, 22, 6);
   const ring = [

@@ -3008,5 +3008,9 @@
   "Edit anchors, data packs and shot details": "Edita anclas, paquetes de datos y detalles de los planos",
   "Download this scene as JSON or an asset bundle": "Descarga esta escena como JSON o como paquete de recursos",
   "Left panels": "Paneles izquierdos",
-  "Right panels": "Paneles derechos"
+  "Right panels": "Paneles derechos",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · OBSERVACIÓN DE ESTACIÓN",
+  "RH {percent}%": "HR {percent}%",
+  "WIND {speed} KM/H {direction}": "VIENTO {speed} KM/H {direction}",
+  "{station} · {distance} KM FROM LOCATION": "{station} · A {distance} KM DE LA UBICACIÓN"
 }

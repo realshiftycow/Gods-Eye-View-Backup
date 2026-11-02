@@ -3008,5 +3008,9 @@
   "Left panels": "Panneaux de gauche",
   "Right panels": "Panneaux de droite",
   "CONFIRMED": "CONFIRMÉE",
-  "PAD / RTLS": "PAS DE TIR / RTLS"
+  "PAD / RTLS": "PAS DE TIR / RTLS",
+  "RH {percent}%": "HR {percent}%",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · OBSERVATION DE STATION",
+  "{station} · {distance} KM FROM LOCATION": "{station} · À {distance} KM DU LIEU",
+  "WIND {speed} KM/H {direction}": "VENT {speed} KM/H {direction}"
 }

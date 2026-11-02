@@ -2868,5 +2868,9 @@
   "Left panels": "左パネル",
   "Right panels": "右パネル",
   "CONFIRMED": "確認済み",
-  "PAD / RTLS": "射場 / RTLS"
+  "PAD / RTLS": "射場 / RTLS",
+  "RH {percent}%": "相対湿度 {percent}%",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · 観測所の観測",
+  "{station} · {distance} KM FROM LOCATION": "{station} · 位置から {distance} KM",
+  "WIND {speed} KM/H {direction}": "風速 {speed} KM/H {direction}"
 }

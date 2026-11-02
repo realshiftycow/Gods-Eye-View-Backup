@@ -2868,5 +2868,9 @@
   "Edit anchors, data packs and shot details": "編輯錨點、數據包和鏡頭詳情",
   "Download this scene as JSON or an asset bundle": "將此場景下載為 JSON 或資源包",
   "Left panels": "左側面板",
-  "Right panels": "右側面板"
+  "Right panels": "右側面板",
+  "RH {percent}%": "相對濕度 {percent}%",
+  "DMH / DINAC · STATION OBSERVATION": "DMH / DINAC · 氣象站觀測",
+  "{station} · {distance} KM FROM LOCATION": "{station} · 距所選位置 {distance} km",
+  "WIND {speed} KM/H {direction}": "風速 {speed} km/h {direction}"
 }
