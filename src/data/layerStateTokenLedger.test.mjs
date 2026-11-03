@@ -37,11 +37,17 @@ const CHECKER_PATH = fileURLToPath(
 const NEXT_PATH = fileURLToPath(
   new URL('../../scripts/next-layer-state-token.mjs', import.meta.url),
 );
-const reservationRows = JSON.parse(
+const allReservationRows = JSON.parse(
   readFileSync(
     new URL('./layerStateTokenReservations.json', import.meta.url),
     'utf8',
   ),
+);
+// The allocation scenarios below start from the ledger as published before
+// the USGS water layers (digits 9, 00 and 01 are theirs), so each scenario still
+// exercises "the next free token is 9".
+const reservationRows = allReservationRows.filter(
+  ([id]) => !id.startsWith('local-usgs-'),
 );
 
 test('pre-ledger published ownership is independent of the candidate mapping', () => {
@@ -104,7 +110,11 @@ function writeCodecFixture(cwd, rows, entries) {
     providerCodec,
     readFileSync(new URL('./idSwitches.js', import.meta.url)),
   );
-  const source = readFileSync(CODEC_SOURCE_PATH, 'utf8');
+  // The fixtures model the codec before the USGS water layers took 9, 00 and 01.
+  const source = readFileSync(CODEC_SOURCE_PATH, 'utf8').replace(
+    /\n {2}Object\.freeze\(\{\s*id: 'local-usgs-[^}]*\}\),/g,
+    '',
+  );
   const registryEnd = ']);\n\nexport const REGISTERED_LAYER_IDS';
   assert.equal(source.split(registryEnd).length, 2);
   const additions = entries
@@ -125,10 +135,10 @@ function writeCodecFixture(cwd, rows, entries) {
 
 test('reservation ledger is complete, pinned, and rejects duplicate or malformed rows', () => {
   assert.deepEqual(
-    { ...parseLayerStateTokenReservations(reservationRows) },
+    { ...parseLayerStateTokenReservations(allReservationRows) },
     { ...LAYER_STATE_TOKEN_RESERVATIONS },
   );
-  assert.equal(Object.keys(LAYER_STATE_TOKEN_RESERVATIONS).length, 35);
+  assert.equal(Object.keys(LAYER_STATE_TOKEN_RESERVATIONS).length, 38);
   assert.deepEqual(
     { ...LAYER_STATE_TOKEN_RESERVATIONS },
     {
@@ -140,6 +150,9 @@ test('reservation ledger is complete, pinned, and rejects duplicate or malformed
       'sea-marks': '6',
       'ski-pistes': '7',
       'drone-airspace': '8',
+      'local-usgs-water': '9',
+      'local-usgs-lakes': '00',
+      'local-usgs-springs': '01',
     },
   );
   assert.throws(
@@ -364,7 +377,7 @@ test('an isolated valid two-character fixture round-trips an l field beyond the 
     );
     assert.equal(
       validateLayerStateAllocations(
-        LAYER_STATE_TOKEN_RESERVATIONS,
+        parseLayerStateTokenReservations(reservationRows),
         codec.LAYER_STATE_TOKEN_RESERVATIONS,
       ),
       true,
