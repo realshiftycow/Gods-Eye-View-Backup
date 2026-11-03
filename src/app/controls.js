@@ -21,6 +21,8 @@ export function createApplicationControls({
   defer,
   initialShareCode = null,
   localePicker = true,
+  initialCamera = flyToAustin,
+  initialCameraLabel = t('Flying to Austin, TX...'),
 }) {
   // Initialize the style manager (post-processing, HUD, locations, share links)
   const styleManager = new Controls(viewer, {
@@ -59,8 +61,8 @@ export function createApplicationControls({
 
   // If no share link state, do default fly-to Austin
   if (!styleManager.hasShareState) {
-    loaderStatus.textContent = t('Flying to Austin, TX...');
-    defer(flyToAustin(viewer));
+    loaderStatus.textContent = initialCameraLabel;
+    defer(initialCamera(viewer));
   } else {
     loaderStatus.textContent = t('Restoring shared view...');
   }
