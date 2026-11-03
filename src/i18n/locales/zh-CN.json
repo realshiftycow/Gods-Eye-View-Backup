@@ -1,4 +1,7 @@
 {
+  "Close camera preview": "关闭摄像头预览",
+  "Refresh map still": "刷新地图静止画面",
+  "The map still uses a separate request and may show a different moment.": "地图静止画面通过单独的请求获取，可能显示不同的时刻。",
   "Pick a shape, then click the map.": "先选择形状，再在地图上点击。",
   "Enter to place the pin, Esc to cancel.": "按 Enter 放置图钉，按 Esc 取消。",
   "Click where the pin goes.": "点击图钉的放置位置。",
@@ -2874,5 +2877,6 @@
   "Exit cockpit to fly to a drawing": "请先退出座舱，再飞往绘制位置",
   "Directions, drawing and your own files": "路线导航、绘制和你自己的文件",
   "Sea Marks": "航标",
-  "Ski Pistes": "滑雪道"
+  "Ski Pistes": "滑雪道",
+  "Video plays from Québec 511, which sees your IP address.": "视频从 Québec 511 播放，Québec 511 会看到你的 IP 地址。"
 }

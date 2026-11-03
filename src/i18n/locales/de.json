@@ -1,4 +1,7 @@
 {
+  "Close camera preview": "Kameravorschau schließen",
+  "Refresh map still": "Kartenstandbild aktualisieren",
+  "The map still uses a separate request and may show a different moment.": "Das Kartenstandbild wird separat abgerufen und kann einen anderen Moment zeigen.",
   "Flying to Austin, TX...": "Flug nach Austin, TX...",
   "Restoring shared view...": "Geteilte Ansicht wird wiederhergestellt...",
   "Configuring viewer...": "Viewer wird konfiguriert...",
@@ -2944,5 +2947,6 @@
   "Exit cockpit to fly to a drawing": "Cockpit verlassen, um zu einer Zeichnung zu fliegen",
   "Directions, drawing and your own files": "Route, Zeichnen und eigene Dateien",
   "Sea Marks": "Seezeichen",
-  "Ski Pistes": "Skipisten"
+  "Ski Pistes": "Skipisten",
+  "Video plays from Québec 511, which sees your IP address.": "Das Video wird von Québec 511 abgespielt, das Ihre IP-Adresse sieht."
 }

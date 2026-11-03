@@ -1,4 +1,7 @@
 {
+  "Close camera preview": "Закрити перегляд камери",
+  "Refresh map still": "Оновити кадр на карті",
+  "The map still uses a separate request and may show a different moment.": "Кадр на карті запитується окремо та може показувати інший момент.",
   "Pick a shape, then click the map.": "Виберіть фігуру й клацніть на карті.",
   "Enter to place the pin, Esc to cancel.": "Enter — поставити мітку, Esc — скасувати.",
   "Click where the pin goes.": "Клацніть там, де має бути мітка.",
@@ -3084,5 +3087,6 @@
   "Exit cockpit to fly to a drawing": "Вийдіть із кабіни, щоб перелетіти до малюнка",
   "Directions, drawing and your own files": "Маршрути, малювання та ваші файли",
   "Sea Marks": "Морські знаки",
-  "Ski Pistes": "Гірськолижні траси"
+  "Ski Pistes": "Гірськолижні траси",
+  "Video plays from Québec 511, which sees your IP address.": "Відео відтворюється з Québec 511, який бачить вашу IP-адресу."
 }
