@@ -1763,10 +1763,12 @@ export function flyRoute(
     };
   }
   let route = routes[routes.length - 1];
+  // The model names a route by the label annotate_map gave it, which stays
+  // metric (`toolLabel`); the caption on the map follows Display → Units.
   if (args.label) {
     const wanted = String(args.label).toLowerCase();
     const byLabel = routes.filter((a) =>
-      String(a.label || '')
+      String(a.toolLabel ?? a.label ?? '')
         .toLowerCase()
         .includes(wanted),
     );
@@ -1829,7 +1831,7 @@ export function flyRoute(
     return {
       ok: true,
       action: 'fly_route',
-      label: route.label || null,
+      label: route.toolLabel ?? route.label ?? null,
       speed,
       distanceM: Math.round(_active.totalM),
       durationS: Math.round(_active.durationS),

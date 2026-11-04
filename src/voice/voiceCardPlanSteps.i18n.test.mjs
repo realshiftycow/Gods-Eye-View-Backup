@@ -295,7 +295,7 @@ test('area, imagery and OSM card lines are shown in the UI language', () => {
     notDrawn: 'the map was cleared while looking it up',
   };
   const areaLines = inLocale('de', () => presentResult('resolve_area', area).display.lines);
-  assert.ok(areaLines.includes('250 m um das Wahrzeichen'), areaLines.join(' | '));
+  assert.ok(areaLines.includes('250\u00a0m um das Wahrzeichen'), areaLines.join(' | '));
   assert.ok(areaLines.includes('Teile: 3'));
   assert.ok(areaLines.includes('Gezeichnete Teile: 2 von 3'));
   assert.ok(areaLines.some((line) => line.includes('die Karte wurde während der Suche geleert')));
