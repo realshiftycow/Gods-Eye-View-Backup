@@ -31,6 +31,7 @@ import { ghostMapsProxy } from './ghostMaps.js';
 import { droneAirspaceProxy } from './droneAirspace.js';
 import { cycloneProxy } from './cyclones.js';
 import { windProxy } from './wind.js';
+import { usgsWaterProxy } from './usgsWater.js';
 
 /**
  * Construct the local provider plugins in their established order.
@@ -74,6 +75,7 @@ function localProviderPlugins({
     ...(gemini ? [geminiLiveProxy({ realtime: gemini })] : []),
     googlePlacesContextProxy(),
     windProxy(),
+    usgsWaterProxy(),
     weatherProxy(),
     cycloneProxy(),
     mapillaryProxy(),

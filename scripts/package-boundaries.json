@@ -11,7 +11,10 @@
       "src/data/localGeojsonLod.js",
       "src/data/inputOwnership.js",
       "src/data/infrastructureOverlayEntry.js",
-      "src/sources/infrastructureData.js"
+      "src/sources/infrastructureData.js",
+      "src/layers/usgsWater/index.js",
+      "src/layers/usgsWater/copy.js",
+      "src/i18n/marker.js"
     ],
     "external": ["cesium"]
   },
@@ -3238,7 +3241,9 @@
       "src/voice/osmActions.js",
       "src/layers/osmPlaces/index.js",
       "src/app/layers/osmPlaces.js",
-      "src/voice/areaActions.js"
+      "src/voice/areaActions.js",
+      "src/layers/usgsWater/index.js",
+      "src/layers/usgsWater/copy.js"
     ],
     "external": [
       "hls.js",
@@ -3855,7 +3860,9 @@
       "src/data/local_data/wof_neighborhoods/files.js",
       "src/layers/osmPlaces/model.js",
       "src/layers/osmPlaces/index.js",
-      "src/app/layers/osmPlaces.js"
+      "src/app/layers/osmPlaces.js",
+      "src/layers/usgsWater/index.js",
+      "src/layers/usgsWater/copy.js"
     ],
     "external": [
       "hls.js",
