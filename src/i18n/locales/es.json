@@ -3166,5 +3166,20 @@
   "The provider rejected the API key. Check it in Provider Settings.": "El proveedor rechazó la clave de API. Revísala en Ajustes de proveedores.",
   "Too many chat requests. Try again in {seconds} s.": "Demasiadas solicitudes de chat. Vuelve a intentarlo en {seconds} s.",
   "The provider refused access for this key. Check the key's project, region or permissions.": "El proveedor denegó el acceso a esta clave. Revisa el proyecto, la región o los permisos de la clave.",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "La cuenta del proveedor no tiene crédito. Revisa la facturación o elige otro proveedor de IA en Ajustes."
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "La cuenta del proveedor no tiene crédito. Revisa la facturación o elige otro proveedor de IA en Ajustes.",
+  "Tilt up toward the horizon": "Inclinar hacia el horizonte",
+  "Tilt down toward top-down view": "Inclinar hacia la vista cenital",
+  "Top-down view": "Vista cenital",
+  "Look left": "Mirar a la izquierda",
+  "Look right": "Mirar a la derecha",
+  "Look up": "Mirar hacia arriba",
+  "Look down": "Mirar hacia abajo",
+  "Map navigation": "Navegación del mapa",
+  "Tilt": "Inclinación",
+  "Tilt: top-down (bottom) to near horizon (top)": "Inclinación: cenital (abajo) a casi horizonte (arriba)",
+  "Map heading. Drag to rotate, arrow keys turn, Home for north": "Rumbo del mapa. Arrastra para girar, las flechas giran, Inicio para el norte",
+  "North, 0 degrees": "Norte, 0 grados",
+  "Look around": "Mirar alrededor",
+  "{heading} degrees from north": "{heading} grados desde el norte",
+  "{tilt} degrees from top-down": "{tilt} grados desde la vista cenital"
 }
