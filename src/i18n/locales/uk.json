@@ -3241,5 +3241,15 @@
   "The provider rejected the API key. Check it in Provider Settings.": "Постачальник відхилив ключ API. Перевірте його в «Налаштуваннях постачальників».",
   "Too many chat requests. Try again in {seconds} s.": "Забагато запитів до чату. Спробуйте ще раз через {seconds} с.",
   "The provider refused access for this key. Check the key's project, region or permissions.": "Постачальник відмовив цьому ключу в доступі. Перевірте проєкт, регіон або дозволи ключа.",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "На вашому рахунку в постачальника закінчилися кошти. Перевірте оплату або виберіть іншого постачальника ШІ в налаштуваннях."
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "На вашому рахунку в постачальника закінчилися кошти. Перевірте оплату або виберіть іншого постачальника ШІ в налаштуваннях.",
+  "Press OPEN to load the photo": "Натисніть «ВІДКРИТИ», щоб завантажити фото",
+  "Captured {month}": "Знято: {month}",
+  "this spot": "це місце",
+  "the view centre": "центр карти",
+  "{source} at {place}": "{source}: {place}",
+  "Street level at {place}": "Вуличні знімки: {place}",
+  "Switching map": "Перемикання карти",
+  "Opening imagery": "Відкриття знімків",
+  "Street View is ready: press {open} to load it": "Перегляд вулиць готовий: натисніть {open}, щоб завантажити",
+  "Street-level photos are hidden in the current view. Leave it first.": "Вуличні знімки приховані в поточному режимі. Спершу вийдіть із нього."
 }

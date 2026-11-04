@@ -55,9 +55,31 @@ test('the complete Realtime tool payload pins the manifest-generated layer relea
     // Voice geometry adds resolve_area, find_imagery, osm_query, the analyst
     // area scopes and the osm-places layer; natural-region candidates and the
     // tightened area tool wording follow review.
+    // show_street_level (map, source, photo) is the only change on top of main.
+    SHOW_STREET_LEVEL_PAYLOAD_DIGEST,
+  );
+  // Every shipped tool is byte-identical to the previous release: the new
+  // tool is the whole difference, so a later edit cannot hide in a re-pin.
+  const shipped = createHash('sha256')
+    .update(
+      JSON.stringify(
+        stable(
+          GEV_REALTIME_TOOLS.filter(
+            (tool) =>
+              !['set_cyber_sonar', 'show_street_level'].includes(tool.name),
+          ),
+        ),
+      ),
+    )
+    .digest('hex');
+  assert.equal(
+    shipped,
     'd0c5ad733670972713a54cb10676c42b7c6e78834bfff52b473c0e8a45e742c3',
   );
 });
+
+const SHOW_STREET_LEVEL_PAYLOAD_DIGEST =
+  '3ffa77ea3f4a1c9a14eddf4963c4498d6d32330414818a3ef0f24e744878e5aa';
 
 test('descriptions customize wording without changing immutable shared arguments', () => {
   const descriptions = {
@@ -152,6 +174,7 @@ test('all legacy action arguments are byte-identical after removing the delibera
         'resolve_area',
         'find_imagery',
         'osm_query',
+        'show_street_level',
       ].includes(tool.name),
   );
   // Layer enums are generated from the voice layer manifest and pinned by

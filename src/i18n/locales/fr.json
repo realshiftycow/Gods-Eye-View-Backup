@@ -3166,5 +3166,15 @@
   "The provider rejected the API key. Check it in Provider Settings.": "Le fournisseur a refusé la clé API. Vérifiez-la dans les paramètres des fournisseurs.",
   "Too many chat requests. Try again in {seconds} s.": "Trop de requêtes de discussion. Réessayez dans {seconds} s.",
   "The provider refused access for this key. Check the key's project, region or permissions.": "Le fournisseur a refusé l'accès pour cette clé. Vérifiez le projet, la région ou les autorisations de la clé.",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "Le compte du fournisseur n'a plus de crédit. Vérifiez la facturation ou choisissez un autre fournisseur d'IA dans les paramètres."
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "Le compte du fournisseur n'a plus de crédit. Vérifiez la facturation ou choisissez un autre fournisseur d'IA dans les paramètres.",
+  "Press OPEN to load the photo": "Appuyez sur OUVRIR pour charger la photo",
+  "Captured {month}": "Prise en {month}",
+  "this spot": "cet endroit",
+  "the view centre": "le centre de la vue",
+  "{source} at {place}": "{source} à {place}",
+  "Street level at {place}": "Niveau rue à {place}",
+  "Switching map": "Changement de carte",
+  "Opening imagery": "Ouverture des images",
+  "Street View is ready: press {open} to load it": "Street View est prêt : appuyez sur {open} pour le charger",
+  "Street-level photos are hidden in the current view. Leave it first.": "Les photos au niveau de la rue sont masquées dans la vue actuelle. Quittez-la d’abord."
 }

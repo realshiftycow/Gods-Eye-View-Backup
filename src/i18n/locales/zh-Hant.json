@@ -3016,5 +3016,15 @@
   "The provider rejected the API key. Check it in Provider Settings.": "服務商拒絕了 API 密鑰。請在服務商設置中檢查。",
   "Too many chat requests. Try again in {seconds} s.": "聊天請求過多。請在 {seconds} 秒後重試。",
   "The provider refused access for this key. Check the key's project, region or permissions.": "服務商拒絕了此密鑰的訪問請求。請檢查該密鑰所屬的項目、區域或權限。",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "服務商賬戶餘額不足。請檢查賬戶的計費信息，或在設置中選擇其他 AI 服務商。"
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "服務商賬戶餘額不足。請檢查賬戶的計費信息，或在設置中選擇其他 AI 服務商。",
+  "Press OPEN to load the photo": "點擊“打開”載入照片",
+  "Captured {month}": "拍攝於 {month}",
+  "this spot": "此處",
+  "the view centre": "視圖中心",
+  "{source} at {place}": "{place} 的 {source}",
+  "Street level at {place}": "{place} 的街景",
+  "Switching map": "正在切換地圖",
+  "Opening imagery": "正在打開影像",
+  "Street View is ready: press {open} to load it": "街景已就緒：按 {open} 載入",
+  "Street-level photos are hidden in the current view. Leave it first.": "目前的檢視隱藏了街景照片。請先離開此檢視。"
 }
