@@ -3016,5 +3016,8 @@
   "The provider rejected the API key. Check it in Provider Settings.": "プロバイダーがAPIキーを拒否しました。プロバイダー設定で確認してください。",
   "Too many chat requests. Try again in {seconds} s.": "チャットのリクエストが多すぎます。{seconds}秒後にもう一度お試しください。",
   "The provider refused access for this key. Check the key's project, region or permissions.": "プロバイダーがこのキーでのアクセスを拒否しました。キーのプロジェクト、リージョン、権限を確認してください。",
-  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "プロバイダーアカウントのクレジットが不足しています。課金状況を確認するか、設定で別のAIプロバイダーを選んでください。"
+  "The provider account is out of credit. Check its billing, or choose another AI Provider in Settings.": "プロバイダーアカウントのクレジットが不足しています。課金状況を確認するか、設定で別のAIプロバイダーを選んでください。",
+  "Clean view: hide the controls": "クリーンビュー：操作を隠す",
+  "Exit clean view: show the controls": "クリーンビューを終了：操作を表示",
+  "{label} (V)": "{label} (V)"
 }
