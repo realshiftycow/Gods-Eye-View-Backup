@@ -551,7 +551,8 @@
     "ΔE",
     "ΔN",
     "Ⅱ PAUSE",
-    "▲ {frp} MW"
+    "▲ {frp} MW",
+    "SATELLITE"
   ],
   "it": [
     "1090 MHz",
@@ -735,7 +736,8 @@
     "{value} conf",
     "ΔE",
     "ΔN",
-    "▲ {frp} MW"
+    "▲ {frp} MW",
+    "SATELLITE"
   ],
   "ja": [
     "1090 MHz",
