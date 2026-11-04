@@ -3238,7 +3238,11 @@
       "src/voice/osmActions.js",
       "src/layers/osmPlaces/index.js",
       "src/app/layers/osmPlaces.js",
-      "src/voice/areaActions.js"
+      "src/voice/areaActions.js",
+      "src/layers/aurora/rendering.js",
+      "src/layers/aurora/magneticLocalTime.js",
+      "src/layers/aurora/source.js",
+      "src/layers/aurora/index.js"
     ],
     "external": [
       "hls.js",
@@ -3855,7 +3859,10 @@
       "src/data/local_data/wof_neighborhoods/files.js",
       "src/layers/osmPlaces/model.js",
       "src/layers/osmPlaces/index.js",
-      "src/app/layers/osmPlaces.js"
+      "src/app/layers/osmPlaces.js",
+      "src/layers/aurora/rendering.js",
+      "src/layers/aurora/magneticLocalTime.js",
+      "src/layers/aurora/index.js"
     ],
     "external": [
       "hls.js",
