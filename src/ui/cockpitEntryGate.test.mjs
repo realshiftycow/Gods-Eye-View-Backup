@@ -73,6 +73,7 @@ function fixture(
     services: {
       flightsLayer: { getTrackedInfo: trackedFrom('flights') },
       militaryFlightsLayer: { getTrackedInfo: trackedFrom('military') },
+      aisLiveVesselsLayer: { getCockpitSubject: () => null },
       militaryAwarenessLayer: { getContextSnapshot: () => null },
       isTr3b: () => false,
       holdContinuousRender() {},
@@ -107,7 +108,7 @@ function fixture(
   t.after(() => {
     coordinator.stop();
     app.unmount();
-    document.body.classList.remove('cockpit-mode');
+    document.body.classList.remove('cockpit-mode', 'cockpit-bridge');
   });
   /** Turn a layer off and tell the Context owner, as the data manager does. */
   const disable = (layerId) => {
@@ -138,6 +139,7 @@ test('a civilian aircraft enters with Live Flights alone: no Contacts, no Milita
   assert.equal(state.entryAllowed, true);
   assert.equal(state.entryBlockedReason, null);
   assert.equal(cockpit.enter(), true);
+  assert.equal(cockpit.subjectKind, 'aircraft');
 });
 
 test('a military aircraft enters with Military Flights alone', (t) => {
@@ -231,4 +233,20 @@ test('the readout offers the same entry, labelled by kind, and enters on click',
   await nextTick();
   assert.equal(cockpit.active, true);
   assert.equal(readoutEntry.hidden, true, 'inside, there is nothing to enter');
+});
+
+test('the readout entry reads BRIDGE for a selected vessel', async (t) => {
+  const { $, store } = fixture(t);
+  store.publishPresence({
+    active: false,
+    entryAvailable: true,
+    entryKind: 'vessel',
+    subjectKind: null,
+    tr3b: null,
+  });
+  await nextTick();
+  const readoutEntry = $('#cockpit-entry-readout');
+  assert.equal(readoutEntry.hidden, false);
+  assert.match(readoutEntry.textContent, /directions_boat/);
+  assert.match(readoutEntry.textContent, /BRIDGE/);
 });

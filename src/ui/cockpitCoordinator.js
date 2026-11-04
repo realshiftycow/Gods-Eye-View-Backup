@@ -2,6 +2,7 @@ import { nextTick } from 'vue';
 import { CockpitViewController, CockpitDisplayPortal } from './cockpit.js';
 import {
   COCKPIT_AIRCRAFT_LAYER_IDS,
+  bridgeEntryAllowed,
   cockpitEntryAllowed,
 } from '../contextModePolicy.js';
 import { formatAwarenessLabel } from '../data/militaryAwarenessEngine.js';
@@ -40,6 +41,7 @@ export class CockpitCoordinator {
     const {
       flightsLayer,
       militaryFlightsLayer,
+      aisLiveVesselsLayer,
       isTr3b,
       toggleTr3b,
       militaryAwarenessLayer,
@@ -60,6 +62,7 @@ export class CockpitCoordinator {
       services: {
         flightsLayer,
         militaryFlightsLayer,
+        aisLiveVesselsLayer,
         isTr3b,
         toggleTr3b,
         militaryAwarenessLayer,
@@ -93,6 +96,11 @@ export class CockpitCoordinator {
           contextModeChanging: this._contextModeChanging,
         });
       },
+      isBridgeEntryAllowed: () =>
+        bridgeEntryAllowed({
+          vesselsEnabled: !!this._dataManager?.isEnabled('ais-live-vessels'),
+          contextModeChanging: this._contextModeChanging,
+        }),
       publish: this.publishCockpit,
       isUtilityDisclosureOpen: () => !!this.readUtilityDisclosureOpen?.(),
       onEntered: () => this.enterPanels(),
@@ -150,6 +158,11 @@ export class CockpitCoordinator {
     const snapshot = militaryAwarenessLayer.getContextSnapshot?.();
     const info = this.cockpitView?.readAircraftInfo?.();
     const active = Boolean(this.cockpitView?.active);
+    // Voice enters aircraft only; a bridge in use is still reported as it is.
+    const vessel =
+      active && this.cockpitView?.subjectKind === 'vessel'
+        ? this.cockpitView.readVesselInfo?.()
+        : null;
     const gateOpen = Boolean(this.cockpitView?.isEntryAllowed?.());
     // "Could Cockpit be ENTERED right now" — so it is false while already
     // inside, unconditionally. Cockpit takes the entity off
@@ -178,13 +191,22 @@ export class CockpitCoordinator {
               ? 'subject-layer-off'
               : 'no-tracked-aircraft',
       visionMode: this.cockpitView?.visionMode || null,
-      subject: info
+      subject: vessel
         ? {
-            id: info.icao24 || info.id || null,
-            layerId: info.layerId || null,
-            callsign: info.callsign || null,
+            kind: 'vessel',
+            id: vessel.mmsi,
+            layerId: vessel.layerId,
+            callsign: null,
+            name: vessel.name,
           }
-        : null,
+        : info
+          ? {
+              kind: 'aircraft',
+              id: info.icao24 || info.id || null,
+              layerId: info.layerId || null,
+              callsign: info.callsign || null,
+            }
+          : null,
       navigation: snapshot
         ? {
             canPrevious: Boolean(snapshot.navigation?.canPrevious),
