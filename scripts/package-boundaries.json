@@ -1611,7 +1611,11 @@
       "src/i18n/locales/uk.json",
       "src/i18n/locales/zh-CN.json",
       "src/i18n/locales/zh-Hant.json",
-      "src/ui/unitLabels.js"
+      "src/ui/unitLabels.js",
+      "src/layers/satellites/classes.js",
+      "src/data/ucsSatellites.js",
+      "src/data/bundledJson.js",
+      "src/data/retryableLoad.js"
     ],
     "external": ["cesium", "satellite.js"]
   },
@@ -3260,7 +3264,9 @@
       "src/voice/osmActions.js",
       "src/layers/osmPlaces/index.js",
       "src/app/layers/osmPlaces.js",
-      "src/voice/areaActions.js"
+      "src/voice/areaActions.js",
+      "src/layers/satellites/classes.js",
+      "src/data/ucsSatellites.js"
     ],
     "external": [
       "hls.js",
@@ -3878,7 +3884,9 @@
       "src/data/local_data/wof_neighborhoods/files.js",
       "src/layers/osmPlaces/model.js",
       "src/layers/osmPlaces/index.js",
-      "src/app/layers/osmPlaces.js"
+      "src/app/layers/osmPlaces.js",
+      "src/layers/satellites/classes.js",
+      "src/data/ucsSatellites.js"
     ],
     "external": [
       "hls.js",
@@ -4379,7 +4387,13 @@
   },
   "satellites-source": {
     "exports": ["./layers/satellites/source"],
-    "modules": ["src/layers/satellites/source.js"],
+    "modules": [
+      "src/layers/satellites/source.js",
+      "src/layers/satellites/classes.js",
+      "src/data/ucsSatellites.js",
+      "src/data/bundledJson.js",
+      "src/data/retryableLoad.js"
+    ],
     "external": []
   },
   "traffic-source-factory": {
@@ -4978,7 +4992,9 @@
       "src/layers/alpr/records.js",
       "src/layers/alpr/tileRecords.js",
       "src/sources/infrastructureData.js",
-      "src/sources/eventPacks.js"
+      "src/sources/eventPacks.js",
+      "src/layers/satellites/classes.js",
+      "src/data/ucsSatellites.js"
     ],
     "external": ["@mapbox/vector-tile", "pbf"]
   },
