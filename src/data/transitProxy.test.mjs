@@ -137,6 +137,7 @@ function encodeFeed({
     const position = new PbfWriter();
     position.writeFloatField(1, entity.lat);
     position.writeFloatField(2, entity.lon);
+    if (entity.speed != null) position.writeFloatField(5, entity.speed);
     vehicle.writeBytesField(2, position.finish());
     if (entity.timestamp) vehicle.writeVarintField(5, entity.timestamp);
     const descriptor = new PbfWriter();
@@ -282,6 +283,16 @@ test('the snapshot builder fills timestamps from the header it decoded', () => {
   assert.equal(snapshot.vehicles[0].timestamp, 1_700_000_000);
   assert.equal(snapshot.vehicles[0].timestampSource, 'header');
   assert.equal(snapshot.feedTimestamp, 1_700_000_000);
+});
+
+test('Rio speeds pass through as the m/s they are published in', () => {
+  // SMTR publishes m/s, as the spec requires: checked against how far
+  // vehicles moved between reports on 2026-11-05.
+  const bytes = encodeFeed({
+    entities: [{ id: 'moving', lat: -22.9, lon: -43.2, speed: 10 }],
+  });
+  const rio = buildTransitSnapshot(getTransitFeed('smtr-rio-onibus'), bytes, 1);
+  assert.equal(rio.vehicles[0].speedMps, 10);
 });
 
 test('conditional-request validators and gzip ride along with feed identification', () => {
