@@ -1066,6 +1066,28 @@ export function getOverlayPaintRect(sourceId, entryId) {
 }
 
 /**
+ * Whether an entry is queued to paint in the frame being painted. Custom lanes
+ * run before the host's own entries, so `getOverlayPaintRect` has nothing for
+ * this frame yet while they paint; this answers from the solved paint queue.
+ * @param {string} sourceId
+ * @param {string} entryId
+ * @returns {boolean}
+ */
+export function isOverlayEntryQueued(sourceId, entryId) {
+  if (_destroyed) return false;
+  const record = _records.get(entryKey(String(sourceId), String(entryId)));
+  if (!record || record.queuedStamp !== _frameStamp) return false;
+  // Same channels as the paint, minus the per-frame keyhole and sonar fades.
+  return (
+    record.sourceAlpha *
+      record.queuedItem.temporalAlpha *
+      record.distanceAlpha *
+      record.altitudeAlpha >
+    0.001
+  );
+}
+
+/**
  * Resolve the topmost interactive world-overlay entry at CSS-pixel coords.
  * @param {number} x
  * @param {number} y
@@ -1737,6 +1759,8 @@ function getProjectionRecord(entry) {
       contentAlpha: 1,
       altitudeAlpha: 1,
       sourceAlpha: 1,
+      queuedStamp: 0,
+      queuedItem: null,
       protectedPlacement: null,
       distanceOptions: {},
       altitudeOptions: {},
@@ -2254,6 +2278,11 @@ function addPaintItem(record, placement, temporalAlpha, selected) {
   item.zIndex = record.entry.zIndex;
   item.key = record.key;
   _paintQueue[_paintCount++] = item;
+  // Read by `isOverlayEntryQueued` while the custom lanes paint, before this
+  // item publishes its paint rect. Only a stamp and a pointer: storing the
+  // item's alpha here would box a double per paint item per frame.
+  record.queuedStamp = _frameStamp;
+  record.queuedItem = item;
 }
 
 function sourceCanPaint(sourceId) {
